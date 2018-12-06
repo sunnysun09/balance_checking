@@ -1,5 +1,4 @@
 require 'page-object'
-require "net/http"
 
 class BalanceDetail
   include PageObject
@@ -8,13 +7,9 @@ class BalanceDetail
     @browser = browser
   end
   
-  def loadpage
-    
-    #@browser.goto 'https://www.exercise1.com/values'
-    @browser.goto 'C:\Users\guaizi\test\balance\features\TestForm.html'
-
-    sleep 2
-    
+  def loadpage  
+    @browser.goto 'https://www.exercise1.com/values'
+    #@browser.goto 'C:\test\balance\features\TestForm.html'
     @val1_str =  @browser.text_field(:id => 'txt_val_1')
     @val2_str =  @browser.text_field(:id => 'txt_val_2')
     @val3_str =  @browser.text_field(:id => 'txt_val_3')
@@ -25,7 +20,6 @@ class BalanceDetail
   
   def verify_values_appear
     puts "      Verify values appears"
-    
     if !(@val1_str.exists? && @val2_str.exists? && @val3_str.exists? \
           && @val4_str.exists? && @val5_str.exists? && @balance_str.exists?)
       raise "Value fields should appear"
@@ -33,14 +27,12 @@ class BalanceDetail
   end
   
   def verify_values_currency_format
-    puts "      Verify values are in currency format"
-   
+    puts "      Verify values are in currency format"   
     if check_currency_format(@val1_str.value) || check_currency_format(@val2_str.value) \
         || check_currency_format(@val3_str.value) || check_currency_format(@val4_str.value) \
         || check_currency_format(@val5_str.value) || check_currency_format(@balance_str.value)
       raise "Value fields are not in currency format"
-    end
-     
+    end    
     @val1 =  currency_to_float(@val1_str.value)
     @val2 =  currency_to_float(@val2_str.value)
     @val3 =  currency_to_float(@val3_str.value)
@@ -64,7 +56,7 @@ class BalanceDetail
     end
   end
   
-  # check whether the number is in "$23329.50" format
+  # check whether the currency is in "$23,329.50" format
   def check_currency_format(currency)
     currency.gsub(/^(?!0\.00)\d{1,3}(,\d{3})*(\.\d\d)?$/, '').empty?
   end
