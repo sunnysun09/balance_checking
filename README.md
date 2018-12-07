@@ -17,7 +17,8 @@ balance_checking
   
 Setup:
 
-The project is using Cucumber, Ruby and Page Object Model to automate the test. The following steps are needed to install the required packages:
+The project is using Cucumber, Ruby and Page Object Model to automate the test. The following steps are needed 
+to install the required packages:
     1. Install Ruby+Devkit downloadable from http://rubyinstaller.org/downloads
     2. Install Cucumber by running "gem install cucumber" from command prompt
     3. Install Capybara by running "gem install capybara" from command prompt (Optional)
