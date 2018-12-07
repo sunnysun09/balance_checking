@@ -1,5 +1,5 @@
 # balance_checking
-
+<pre>
 This is the test project to verify the balance page data.
 
 Project files:
@@ -59,3 +59,4 @@ cucumber features/balance.feature:9 # Scenario: Verify balance page
 1 scenario (1 failed)
 3 steps (1 failed, 2 passed)
 0m5.554s
+</pre>
