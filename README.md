@@ -1,6 +1,6 @@
 # balance_checking
 <pre>
-This is the test project to verify the balance page data.
+This is the test project to verify the balance page data, using Cucumber, Ruby, Watir WebDriver, and Page Object Model.
 
 Project files:
 
@@ -22,7 +22,7 @@ to install the required packages:
     1. Install Ruby+Devkit downloadable from http://rubyinstaller.org/downloads
     2. Install Cucumber by running "gem install cucumber" from command prompt
     3. Install Capybara by running "gem install capybara" from command prompt (Optional)
-    4. Install Watir WebDriver by running "gem install water-webdriver" from command prompt 
+    4. Install Watir WebDriver by running "gem install watir-webdriver" from command prompt 
     5. Install Page Object by running "gem install page-object" from command prompt
   
 To run:
