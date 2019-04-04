@@ -1,7 +1,4 @@
-require 'page-object'
-
 class BalanceDetail
-  include PageObject
   
   def initialize(browser)
     @browser = browser
