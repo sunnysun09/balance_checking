@@ -1,6 +1,6 @@
 # balance_checking
 <pre>
-This is the test project to verify the balance page data, using Cucumber, Ruby, Watir WebDriver, and Page Object Model.
+This is the test project to verify the balance page data, using Cucumber, Ruby, and Watir WebDriver.
 
 Project files:
 
@@ -11,13 +11,13 @@ balance_checking
              |--- TestForm.html              example page that will be tested
              |--- support
                   |--- env.rb                instantiate a new chrome browser
-                  |--- balance_detail.rb.    tests using Page Object Model
+                  |--- balance_detail.rb.    detail page for checking balance
              |--- step_definitions
                   |--- balance_steps.rb      step file
   
 Setup:
 
-The project is using Cucumber, Ruby and Page Object Model to automate the test. The following steps are needed 
+The project is using Cucumber, Ruby and Watir to automate the test. The following steps are needed 
 to install the required packages:
     1. Install Ruby+Devkit downloadable from http://rubyinstaller.org/downloads
     2. Install Cucumber by running "gem install cucumber" from command prompt
